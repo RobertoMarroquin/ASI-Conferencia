@@ -43,7 +43,7 @@
     <div class="row align-items-center justify-items-center">
         <div class="col-sm-3"></div>
         <div class="col-sm-6 align-self-center bg-light">
-            <form action="http://localhost/asi/index.php/registro/registrar" method="post">
+            <form action="http://localhost/asi/index.php/registro/registrar" method="post" id="formulario">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input id="nombre" class="form-control" type="text" name="nombre">
@@ -66,10 +66,10 @@
                 </div>
                 <div class="form-group">
                     <label for="conferencista">Es Conferencista?</label>
-                    <input type="checkbox" id="conferencista" name="conferencista" onclick="mostrarCampos();" data-toggle="toggle" data-on="Si" data-off="No" data-onstyle="success" data-offstyle="danger">
+                    <input type="checkbox" onclick="mostrar()" id="conferencista" name="conferencista" >
 
                 </div>
-                <div id="soloCongresista" style="display:none;">
+                <div id="soloConferencista" style="display:none;">
                 <!--Esto es solo si el asistente al evento es un Congresista    -->
                 <div class="form-group">
                     <label for="pais">Pais</label>
@@ -90,7 +90,20 @@
     </div>
 </div>
     
-    <script src="./js/bootstrap.js"></script>
+    <script type="text/javascript">
+        var checkbox = document.getElementById("conferencista");
+        function mostrar() {
+            if (checkbox.checked == true) {
+                document.getElementById('soloConferencista').style.display='block';
+            } else {
+                document.getElementById('soloConferencista').style.display='none';
+            }
+        }
+        checkbox.addEventListener('click',mostrar());
+    </script>
+
+
+    <script src="js/bootstrap.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
