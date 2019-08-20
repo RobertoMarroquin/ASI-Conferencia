@@ -81,6 +81,8 @@
                 </tr>
             </tbody>
         </table>
+        <a name="registrar" id="registrar" class="btn btn-primary" href="" role="button">Registrar Nuevo</a>
+
         
     </div>
     <script src="./js/bootstrap.js"></script>
