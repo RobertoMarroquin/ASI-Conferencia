@@ -66,10 +66,10 @@
                 </div>
                 <div class="form-group">
                     <label for="conferencista">Es Conferencista?</label>
-                    <input type="checkbox" id="conferencista" name="conferencista" data-toggle="toggle" data-on="Si" data-off="No" data-onstyle="success" data-offstyle="danger">
+                    <input type="checkbox" id="conferencista" name="conferencista" onclick="mostrarCampos();" data-toggle="toggle" data-on="Si" data-off="No" data-onstyle="success" data-offstyle="danger">
 
                 </div>
-                
+                <div id="soloCongresista" style="display:none;">
                 <!--Esto es solo si el asistente al evento es un Congresista    -->
                 <div class="form-group">
                     <label for="pais">Pais</label>
@@ -79,7 +79,8 @@
                     <label for="tematica">Tematica de Conferencia</label>
                     <input id="tematica" class="form-control" type="text" name="tematica">
                 </div>
-                <!--                                                           -->
+                <!--                                                      -->
+                </div>
                 <div class="row justify-content-center align-items-center">
                     <button type="submit" class="btn btn-primary">Registrar</button>    
                 </div>
