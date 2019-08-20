@@ -55,11 +55,16 @@
         <br>
         <div class="row align-content-end justify-content-end ">
 
-            <select name="select">
-                <option value="21">21/08/2019</option> 
-                <option value="22" selected>22/08/2019</option>
-                <option value="23">23/08/2019</option>
-            </select>
+        <form action="" method="get">
+              <select name="select">
+                  <option value="21" selected>21/08/2019</option> 
+                  <option value="22">22/08/2019</option>
+                  <option value="23">23/08/2019</option>
+              </select>
+              
+              <button type="submit" class="btn btn-primary">Cambiar Fecha</button>
+              
+        </form>
         </div>
         <br>
 
